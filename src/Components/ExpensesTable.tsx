@@ -31,7 +31,7 @@ export const ExpensesTable: FC<ExpensesTableProps> = ({
             <td key={`item-${i}-date`}>{dateFormatter(row.date)}</td>
             <td key={`item-${i}-amount`}>{`£${row.amount}`}</td>
             <td key={`item-${i}-merchant`}>{row.merchant}</td>
-            <td key={`item-${i}-category`}>{row.category}</td>
+            <td key={`item-${i}-category`}>{row.category.charAt(0).toUpperCase() + row.category.slice(1)}</td>
           </tr>
         ))}
       </tbody>
