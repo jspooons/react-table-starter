@@ -9,7 +9,7 @@ export const ExpensesTable: FC<ExpensesTableProps> = ({
     const datetimeSplit = datetime.split('T');
     const timeSplit = datetimeSplit[1].split(':');
 
-    const date = datetimeSplit[0].replace('-', '/');
+    const date = datetimeSplit[0].replace(/-/g, '/');
     const time = `${timeSplit[0]}:${timeSplit[1]}`;
 
     return `${time} - ${date}`;
